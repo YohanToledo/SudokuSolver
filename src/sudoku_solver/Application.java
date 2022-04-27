@@ -60,6 +60,12 @@ public class Application {
 	}
 	
 	
+	public static boolean isValidPosition(int[][] board, int number, int row, int column) {
+		return !isNumberInRow(board, number, row) &&
+				!isNumberInColumn(board, number, column) &&
+				!isNumberInBox(board, number, row, column);
+	}
+	
 	
 	public static void printBoard(int[][] board) {
 		for(int i = 0; i < GRID_SIZE; i++) {
